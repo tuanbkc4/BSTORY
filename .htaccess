@@ -1,0 +1,15 @@
+#Mở chức năng rewrite
+RewriteEngine ON
+#Định nghĩa lại thư mục gốc
+RewriteBase /
+#Bắt đầu viết lại đường dẫn story
+RewriteRule ^lien-he$ contact.php
+RewriteRule ^Login$ auth/login.php
+RewriteRule ^Signup$ /auth/signup.php
+RewriteRule ^Logout$ /auth/logout.php
+RewriteRule ^(.*)-([0-9]*)-page-([0-9]*)$ cat.php?id=$2&page=$3
+RewriteRule ^page-([0-9]*)$ index.php?page=$1
+RewriteRule ^(.*)-([0-9]*)$ cat.php?id=$2
+RewriteRule ^(.*)-([0-9]*).html$ detail.php?id=$2
+RewriteRule ^tim-kiem$ search.php
+
