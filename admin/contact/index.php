@@ -136,9 +136,9 @@
                                     <tbody>
                                         <?php
                                         if (!isset($find)) {
-                                            $qr = "SELECT * FROM contact LIMIT {$offset},{$row_count}";
+                                            $qr = "SELECT * FROM contact ORDER BY contact_id DESC LIMIT {$offset},{$row_count} ";
                                         } else {
-                                            $qr = "SELECT * FROM contact WHERE name LIKE '%$find%' OR email LIKE '%$find%' LIMIT {$offset},{$row_count}";
+                                            $qr = "SELECT * FROM contact WHERE name LIKE '%$find%' OR email LIKE '%$find%' ORDER BY contact_id DESC LIMIT {$offset},{$row_count} ";
                                         }
                                         $result = $conn->query($qr);
                                         while ($row = $result->fetch_assoc()) {

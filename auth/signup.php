@@ -244,7 +244,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/Util/checkInput.php';
                                     $resultAddUser = $conn->query($qrAddUser);
                                     if ($resultAddUser) {
                                         $_SESSION['username'] = $username;
-                                        header('location:login.php?msg=Đăng ký thành công');
+                                        header('location:Login?msg=Đăng ký thành công');
                                         die();
                                     } else {
                                         echo '<span style="color:red;font-style:italic;">Có lỗi khi đăng ký</span>';
@@ -257,7 +257,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/Util/checkInput.php';
                                     $resultAddUser = $conn->query($qrAddUser);
                                     if ($resultAddUser) {
                                         $_SESSION['username'] = $username;
-                                        header('location:login.php?msg=Đăng ký thành công');
+                                        header('location:Login?msg=Đăng ký thành công');
                                         die();
                                     } else {
                                         echo '<span style="color:red;font-style:italic;">Có lỗi khi đăng ký</span>';

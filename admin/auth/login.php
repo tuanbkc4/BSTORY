@@ -79,9 +79,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/Util/dbconnect.php';
                         <?php
                         if (isset($_POST['submit'])) {
                             $username = trim($_POST['username']);
-                            $password = md5(trim($_POST['password']));
-                            echo $password;
-                            
+                            $password = md5(trim($_POST['password']));                            
                             $qr= "SELECT * FROM users WHERE username = '$username' AND password = '$password' AND role = 1";
                             $result = $conn->query($qr);
                             $arUser = $result->fetch_assoc();
